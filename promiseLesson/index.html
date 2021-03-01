@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            async function test() {
+                const fetchRequest = fetch(`https://api.opendota.com/api/players/76561198061622614/rankings`);
+
+                console.log(fetchRequest);
+                // >> Promise {<pending>}
+
+                await fetchRequest;
+
+                console.log(fetchRequest);
+                // >> Promise {<fulfilled>}
+
+                console.log(await fetchRequest);
+                // >> Response {type: "cors", ...
+            }
+            test()
+        </script>
+    </head>
+</html>
